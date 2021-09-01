@@ -1,0 +1,43 @@
+services:
+    mongodb:
+        container_name: mongodb
+        image: mongo:latest
+        restart: always
+        env_file: 
+            - ./environments/mongodb.env
+        volumes: 
+            - ./data/db:/data/db
+        ports:
+            - 27017:27017
+        networks:
+            - nodenet
+
+    nginx:
+        container_name: nginx
+        image: nginx:latest
+        restart: always
+        env_file:
+            - ./environments/nginx.env
+        ports:
+            - 80:80
+        volumes:
+            - ./nginx:/etc/nginx/templates
+        networks:
+            - nodenet
+
+    frontend:
+        container_name: frontend
+        image: node:13
+        restart: always
+        env_file:
+            - ./environments/frontend.env
+        working_dir: /usr/app
+        volumes:
+            - ./frontend:/usr/app
+        networks:
+            - nodenet
+        command: npm run dev
+
+networks:
+    nodenet:
+        driver: bridge

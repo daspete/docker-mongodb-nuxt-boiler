@@ -1,0 +1,5 @@
+/environments/*.env
+/data
+.nuxt
+node_modules
+package-lock.json
