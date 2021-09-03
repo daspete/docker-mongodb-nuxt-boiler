@@ -1,5 +1,5 @@
 <template>
-    <div class="page text-white font-bold text-4xl px-8 py-4 bg-yellow-700 inline-block">Greetz</div>
+    <div class="page text-white font-bold text-4xl px-8 py-4 bg-yellow-700 inline-block">Frontend greetz</div>
 </template>
 
 <script>

@@ -16,8 +16,8 @@ services:
         container_name: nginx
         image: nginx:latest
         restart: always
-        env_file:
-            - ./environments/nginx.env
+        # env_file:
+        #     - ./environments/nginx.env
         ports:
             - 80:80
         volumes:
@@ -33,7 +33,20 @@ services:
             - ./environments/frontend.env
         working_dir: /usr/app
         volumes:
-            - ./frontend:/usr/app
+            - ./../frontend:/usr/app
+        networks:
+            - nodenet
+        command: npm run dev
+
+    admin:
+        container_name: admin
+        image: node:13
+        restart: always
+        env_file:
+            - ./environments/admin.env
+        working_dir: /usr/app
+        volumes:
+            - ./../admin:/usr/app
         networks:
             - nodenet
         command: npm run dev

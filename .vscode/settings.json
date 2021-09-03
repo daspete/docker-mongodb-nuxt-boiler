@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/build": true,
+        "**/stacks": true,
+        "**/dist": true,
+        "**/.nuxt": true,
+        "**/yarn.lock": true,
+        "**/package-lock.json": true
+    },
+    "git.ignoreLimitWarning": true,
+    "files.eol": "\n",
+}
