@@ -21,7 +21,7 @@ services:
         ports:
             - 80:80
         volumes:
-            - ./nginx:/etc/nginx/templates
+            - ./nginx.dev:/etc/nginx/templates
         networks:
             - nodenet
 

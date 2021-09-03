@@ -1,0 +1,10 @@
+services:
+    nginx:
+        volumes:
+            - ./nginx.production:/etc/nginx/templates
+
+    frontend:
+        command: bash -c "npm run build; npm run start"
+
+    admin:
+        command: bash -c "npm run build; npm run start"

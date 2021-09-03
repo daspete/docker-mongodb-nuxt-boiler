@@ -1,5 +1,5 @@
-/docker/environments/*.env
-/docker/data
+/.docker/environments/*.env
+/.docker/data
 .nuxt
 node_modules
 package-lock.json

@@ -4,7 +4,9 @@
     "authors": "author",
     "version": "1.0.0",
     "scripts": {
-        "dev": "npm install; nuxt"
+        "dev": "npm install; nuxt",
+        "build": "npm install; NODE_ENV=production; nuxt build",
+        "start": "NODE_ENV=production; nuxt start"
     },
     "dependencies": {
         "nuxt": "^2.15.8",
